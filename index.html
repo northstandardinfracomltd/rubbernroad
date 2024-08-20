@@ -1,72 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
 
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
+        header img {
+            height: 50px;
+        }
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
 
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
+        /* Main Content */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
 
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+        .grid-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .grid-item h2 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="#">Lien 1</a>
+            <a href="#">Lien 2</a>
+            <a href="#">Lien 3</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="image1.jpg" alt="Image 1">
+            <h2>Sous-titre 1</h2>
         </div>
-      </div>
+        <div class="grid-item">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Sous-titre 2</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image3.jpg" alt="Image 3">
+            <h2>Sous-titre 3</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image4.jpg" alt="Image 4">
+            <h2>Sous-titre 4</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image5.jpg" alt="Image 5">
+            <h2>Sous-titre 5</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image6.jpg" alt="Image 6">
+            <h2>Sous-titre 6</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image7.jpg" alt="Image 7">
+            <h2>Sous-titre 7</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image8.jpg" alt="Image 8">
+            <h2>Sous-titre 8</h2>
+        </div>
+        <div class="grid-item">
+            <img src="image9.jpg" alt="Image 9">
+            <h2>Sous-titre 9</h2>
+        </div>
     </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Mon Site Web - Tous droits réservés</p>
     </footer>
-  </body>
+</body>
 </html>
